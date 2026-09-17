@@ -107,7 +107,7 @@ function Index() {
           <div className="grid gap-5 md:grid-cols-2">
             <Timeline title="Experience" entries={[
               { date: "SEP 2026 — PRESENT", title: "IT Intern", place: "Capaciti · South Africa", body: "Supporting IT operations and digital solutions while gaining hands-on experience in enterprise systems, technical support, and software delivery." },
-              { date: "MAR 2026 — AUG 2026", title: "Developer & IT Facilitator", place: "CumLaude Research Institute · Phuthaditjhaba", body: "Developing and maintaining the institute website while facilitating practical and theory learning in IoT and cloud computing." },
+              { date: "MAR 2026 — AUG 2026", title: "Part time Developer & IT Facilitator", place: "CumLaude Research Institute · Phuthaditjhaba", body: "Developing and maintaining the institute website while facilitating practical and theory learning in IoT and cloud computing." },
             ]} />
             <Timeline title="Education" entries={[
               { date: "2023 — 2025", title: "National Diploma · Software Development", place: "Nelson Mandela University · Port Elizabeth", body: "Built a software development foundation spanning applications, databases, and problem solving." },

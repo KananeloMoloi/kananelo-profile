@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import medicalPortal from "@/assets/medical-portal.jpg";
-import electronicProfile from "@/assets/electronic-profile.jpg";
+import netcareChatbotAsset from "@/assets/netcare-patient-support-chatbot.png.asset.json";
 import cvAsset from "@/assets/Kananelo_Moloi_CV.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -85,7 +84,7 @@ function Index() {
                 <span className="ml-auto font-mono text-[10px] text-muted-foreground">kananelo.config.ts</span>
               </div>
               <pre className="overflow-x-auto py-5 font-mono text-xs leading-7"><code><span className="text-muted-foreground">const </span>developer = {`{`}<br />  role: <span className="text-primary">"developer + facilitator"</span>,<br />  stack: [<span className="text-primary">".NET"</span>, <span className="text-primary">"React"</span>],<br />  focus: <span className="text-primary">"IoT · Cloud"</span>,<br />  mindset: <span className="text-primary">"keep learning"</span>,<br />  status: <span className="text-ok">"building"</span><br />{`}`};</code></pre>
-              <div className="flex justify-between border-t border-line pt-3 font-mono text-[10px] text-muted-foreground"><span>2 projects documented</span><span className="text-ok">● online</span></div>
+               <div className="flex justify-between border-t border-line pt-3 font-mono text-[10px] text-muted-foreground"><span>1 featured project</span><span className="text-ok">● online</span></div>
             </div>
           </div>
         </header>
@@ -98,10 +97,9 @@ function Index() {
 
         <section id="work" className="mx-auto max-w-6xl px-5 py-20">
           <SectionHeading number="01" eyebrow="Selected work" title="Things I've created" note="Hover to inspect" />
-          <div className="grid gap-5 md:grid-cols-12">
-            <ProjectCard className="md:col-span-7" image={medicalPortal} width={1280} height={720} title="Medical Website" label="Team project" description="A collaborative medical web experience combining a React Bootstrap interface with a .NET Core and Entity Framework foundation backed by MySQL." tags={["React", ".NET Core", "Entity Framework", "MySQL", "C#", "Node.js"]} />
-            <ProjectCard className="md:col-span-5" image={electronicProfile} width={1024} height={720} title="Electronic Profile" label="Personal project" description="My first digital profile: a personalised React template shaped with HTML, CSS, and JavaScript to introduce my work online." tags={["React", "JavaScript", "HTML5", "CSS"]} />
-          </div>
+           <div>
+             <ProjectCard image={netcareChatbotAsset.url} width={1368} height={768} title="Netcare Patient Support Chatbot" label="Featured project" description="An accessible healthcare support assistant that helps patients find hospitals and specialists, navigate appointments and pre-admission, and quickly reach emergency information. It includes guided prompts, voice support, text-size controls, and a dark mode." tags={["Patient support", "Conversational UI", "Voice assistance", "Accessibility"]} href="https://github.com/Immaculate96-dev/Netcare-Patient-Support-Chatbot" />
+           </div>
         </section>
 
         <section id="path" className="mx-auto max-w-6xl px-5 py-20">
@@ -145,8 +143,8 @@ function SectionHeading({ number, eyebrow, title, note }: { number: string; eyeb
   return <div className="mb-9 flex items-end justify-between"><div><p className="font-mono text-[11px] uppercase text-primary">( {number} ) — {eyebrow}</p><h2 className="mt-2 font-display text-3xl font-bold md:text-4xl">{title}</h2></div>{note && <span className="hidden font-mono text-xs text-muted-foreground md:block">{note}</span>}</div>;
 }
 
-function ProjectCard({ className, image, width, height, title, label, description, tags }: { className: string; image: string; width: number; height: number; title: string; label: string; description: string; tags: string[] }) {
-  return <article className={`group overflow-hidden rounded-2xl border border-line bg-glass backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl ${className}`}><div className="overflow-hidden"><img src={image} alt={`${title} interface concept`} loading="lazy" width={width} height={height} className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" /></div><div className="p-6"><div className="flex items-start justify-between gap-4"><h3 className="font-display text-xl font-bold">{title}</h3><span className="font-mono text-[10px] uppercase text-muted-foreground">{label}</span></div><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p><div className="mt-5 flex flex-wrap gap-1.5">{tags.map((tag) => <span key={tag} className="rounded-md border border-line bg-background/60 px-2 py-1 font-mono text-[10px]">{tag}</span>)}</div></div></article>;
+function ProjectCard({ image, width, height, title, label, description, tags, href }: { image: string; width: number; height: number; title: string; label: string; description: string; tags: string[]; href: string }) {
+  return <article className="group overflow-hidden rounded-2xl border border-line bg-glass backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"><a href={href} target="_blank" rel="noreferrer" aria-label={`View ${title} on GitHub`} className="grid md:grid-cols-[1.45fr_1fr]"><div className="overflow-hidden border-b border-line md:border-b-0 md:border-r"><img src={image} alt="Netcare Patient Support Chatbot interface" loading="lazy" width={width} height={height} className="aspect-[16/9] h-full w-full object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.02]" /></div><div className="flex flex-col justify-between p-6 md:p-8"><div><div className="flex items-start justify-between gap-4"><h3 className="font-display text-2xl font-bold">{title}</h3><span className="shrink-0 font-mono text-[10px] uppercase text-muted-foreground">{label}</span></div><p className="mt-4 text-sm leading-6 text-muted-foreground">{description}</p><div className="mt-6 flex flex-wrap gap-1.5">{tags.map((tag) => <span key={tag} className="rounded-md border border-line bg-background/60 px-2 py-1 font-mono text-[10px]">{tag}</span>)}</div></div><span className="mt-8 inline-flex items-center gap-2 font-mono text-xs font-medium text-primary">View repository <span aria-hidden="true">↗</span></span></div></a></article>;
 }
 
 function Timeline({ title, entries }: { title: string; entries: { date: string; title: string; place: string; body: string }[] }) {

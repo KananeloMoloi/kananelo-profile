@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import medicalPortal from "@/assets/medical-portal.jpg";
 import electronicProfile from "@/assets/electronic-profile.jpg";
 import cvAsset from "@/assets/Kananelo_Moloi_CV.pdf.asset.json";
@@ -153,6 +153,6 @@ function Timeline({ title, entries }: { title: string; entries: { date: string; 
   return <div className="rounded-2xl border border-line bg-glass p-6 backdrop-blur-xl"><p className="font-mono text-[11px] uppercase text-muted-foreground">{title}</p><ol className="mt-6 space-y-8">{entries.map((entry, index) => <li key={entry.title} className="relative border-l border-line pl-6"><span className={`absolute -left-[5px] top-1 size-2.5 rounded-full ${index === 0 ? "bg-primary" : "bg-muted-foreground"}`} /><p className="font-mono text-[10px] uppercase text-primary">{entry.date}</p><h3 className="mt-1 font-display text-lg font-bold">{entry.title}</h3><p className="mt-1 text-sm font-medium">{entry.place}</p><p className="mt-3 text-sm leading-6 text-muted-foreground">{entry.body}</p></li>)}</ol></div>;
 }
 
-function InfoPanel({ title, children }: { title: string; children: React.ReactNode }) {
+function InfoPanel({ title, children }: { title: string; children: ReactNode }) {
   return <div className="rounded-2xl border border-line bg-glass p-6 backdrop-blur-xl transition-transform hover:-translate-y-1"><p className="mb-5 font-mono text-[11px] uppercase text-muted-foreground">{title}</p>{children}</div>;
 }

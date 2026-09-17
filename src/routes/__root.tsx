@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Kananelo Moloi — Software Developer" },
       { name: "description", content: "Kananelo Moloi — software developer and technology facilitator." },
       { name: "author", content: "Kananelo Moloi" },
       { property: "og:title", content: "Kananelo Moloi — Software Developer" },

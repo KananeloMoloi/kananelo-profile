@@ -106,8 +106,8 @@ function Index() {
           <SectionHeading number="02" eyebrow="The path" title="Learning, then leading" />
           <div className="grid gap-5 md:grid-cols-2">
             <Timeline title="Experience" entries={[
-              { date: "Mar 2026 — Present", title: "Developer & IT Facilitator", place: "CumLaude Research Institute · Phuthaditjhaba", body: "Developing and maintaining the institute website while facilitating practical and theory learning in IoT and cloud computing." },
-              { date: "Feb 2026", title: "Information Technology Facilitator", place: "Free State Smart Skills Center · Phuthaditjhaba", body: "Guided community learners through Cisco Networking Academy courses including cybersecurity and digital literacy." },
+              { date: "MAR 2026 — AUG 2026", title: "Developer & IT Facilitator", place: "CumLaude Research Institute · Phuthaditjhaba", body: "Developing and maintaining the institute website while facilitating practical and theory learning in IoT and cloud computing." },
+              { date: "\n", title: "\n", place: "\n", body: "\n" },
             ]} />
             <Timeline title="Education" entries={[
               { date: "2023 — 2025", title: "National Diploma · Software Development", place: "Nelson Mandela University · Port Elizabeth", body: "Built a software development foundation spanning applications, databases, and problem solving." },

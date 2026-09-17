@@ -67,7 +67,7 @@ function Index() {
           <div className="col-span-12 md:col-span-7">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-glass px-3 py-1.5 font-mono text-[10px] uppercase text-muted-foreground backdrop-blur-md">
               <span className="animate-caret size-1.5 rounded-full bg-ok" />
-              Building from Phuthaditjhaba, South Africa
+              BUILDING FROM JOHANNESBURG, SOUTH AFRICA
             </div>
             <h1 className="font-display text-6xl font-bold leading-[0.98] text-balance sm:text-7xl md:text-8xl">Kananelo<br />Moloi<span className="animate-caret text-primary">_</span></h1>
             <p className="mt-5 min-h-6 font-mono text-sm text-primary">{`> ${role}`}</p>
@@ -111,7 +111,7 @@ function Index() {
             ]} />
             <Timeline title="Education" entries={[
               { date: "2023 — 2025", title: "National Diploma · Software Development", place: "Nelson Mandela University · Port Elizabeth", body: "Built a software development foundation spanning applications, databases, and problem solving." },
-              { date: "2022", title: "Higher Certificate · IT User Support", place: "Nelson Mandela University · George", body: "Learned the support, systems, and communication foundations behind dependable technology." },
+              { date: "2022 - 2023", title: "Higher Certificate · IT User Support", place: "Nelson Mandela University · George", body: "Learned the support, systems, and communication foundations behind dependable technology." },
             ]} />
           </div>
         </section>
@@ -132,7 +132,7 @@ function Index() {
               <div className="flex flex-col gap-4 md:items-end"><a className="font-mono text-sm underline decoration-primary/40 underline-offset-4 hover:decoration-primary" href="mailto:moloimartin8@gmail.com">moloimartin8@gmail.com</a><a className="font-mono text-sm hover:text-primary" href="tel:+27783306898">078 330 6898</a><a href={cvAsset.url} download="Kananelo_Moloi_CV.pdf" className="mt-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary">Download my CV ↓</a></div>
             </div>
           </div>
-          <p className="mt-7 text-center font-mono text-[10px] uppercase text-muted-foreground">Kananelo Moloi · Phuthaditjhaba, South Africa · 2026</p>
+          <p className="mt-7 text-center font-mono text-[10px] uppercase text-muted-foreground">KANANELO MOLOI · JOHANNESBURG, SOUTH AFRICA · 2026</p>
         </section>
       </main>
     </div>

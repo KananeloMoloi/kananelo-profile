@@ -1,6 +1,13 @@
-# Developer Narrative Studio
+# Kananelo Moloi — Portfolio
 
-Build me a mordern personla portfloio using m,y cv as reference and filling everything with it make sure to make it dynamic and developer vibes and also dont be too basic let the portfolio tell nthe story of everything ive created and more and should also be interactive
+A plain HTML, CSS and JavaScript portfolio (no build step): `index.html`, `styles.css`, `script.js`, plus `assets/` (chatbot screenshot and CV).
+
+## Host it on GitHub Pages
+
+1. Push this repository to GitHub.
+2. In GitHub, go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**, pick branch `main` and folder **`/ (root)`**.
+4. Your site goes live at `https://<username>.github.io/<repository-name>/`.
 
 This project was built with [Lovable](https://lovable.dev).
 
